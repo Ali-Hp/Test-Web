@@ -1,0 +1,555 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --colorOne: #54d0dd;
+    --colorTow: #414a52;
+    --colorThree: rgba(65, 74, 82, 1) 100%;
+    --colorfor: rgba(255, 255, 255, 0.9);
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--colorTow);
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* Start - Header*/
+
+header {
+    width: 100%;
+    height: 60px;
+    background-color: var(--colorTow);
+}
+
+header .nav {
+    height: 100%;
+    margin-left: 60px;
+    margin-right: 60px;
+    display: flex;
+    align-items: center;
+}
+
+header .nav .logo {
+    width: 100%;
+}
+
+header .nav .logo p {
+    display: inline-block;
+    color: var(--colorfor);
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 5px;
+}
+
+header .nav .logo .fa {
+    color: var(--colorOne);
+}
+
+header .nav .list i {
+    color: var(--colorOne);
+    display: none;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+header .nav .list {
+    width: 100%;
+}
+
+header .nav .list ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header .nav .list ul li {
+    list-style: none;
+}
+
+header .nav .list ul li a {
+    color: var(--colorfor);
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0 10px;
+    font-size: 15px;
+    padding: 10px;
+}
+
+header .nav .list ul li:first-child a {
+    color: var(--colorOne);
+}
+
+header .nav .list ul li a:hover {
+    color: var(--colorOne);
+}
+
+
+/* End - Header*/
+
+
+/* Start - frontWeb*/
+
+.frontWeb {
+    width: 100%;
+    height: 100%;
+}
+
+.frontWeb .front {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.frontWeb .front img {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+}
+
+.frontWeb .front .contentFront {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 50vh;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.frontWeb .front .contentFront span {
+    display: block;
+    color: var(--colorfor);
+}
+
+.color {
+    color: var(--colorOne);
+    display: inline;
+}
+
+.frontWeb .front .contentFront span:first-child {
+    font-size: 70px;
+    font-weight: 600;
+    letter-spacing: 20px;
+    animation-name: letter;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes letter {
+    0% {
+        letter-spacing: 20px;
+    }
+    25% {
+        letter-spacing: 10px;
+        color: var(--colorOne);
+    }
+    50% {
+        letter-spacing: 20px;
+        color: var(--colorfor);
+    }
+    75% {
+        letter-spacing: 10px;
+        color: var(--colorOne);
+    }
+    100% {
+        letter-spacing: 20px;
+        color: var(--colorfor);
+    }
+}
+
+.frontWeb .front .contentFront span:nth-child(2) {
+    font-size: 25px;
+    margin-top: 15px;
+}
+
+.frontWeb .front .contentFront a {
+    background-color: var(--colorOne);
+    width: 150px;
+    height: 60px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 100px;
+    left: 50%;
+    text-decoration: none;
+    color: var(--colorfor);
+    cursor: pointer;
+    transition: .5s;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+.frontWeb .front .contentFront a:hover {
+    background-color: var(--colorTow);
+    color: var(--colorOne);
+}
+
+
+/* End - frontWeb*/
+
+
+/* Start - AboutMe*/
+
+.aboutMe {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--colorOne);
+    margin-top: -5px;
+    text-align: center;
+}
+
+.aboutMe p {
+    padding-top: 50px;
+    font-size: 35px;
+    color: var(--colorTow);
+}
+
+.aboutMe #hr {
+    height: 2px;
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.aboutMe #hr hr {
+    height: 2px;
+    width: 90px;
+    margin-top: 20px;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none;
+}
+
+.aboutMe {
+    height: 100%;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.aboutMe .boxAbuot {
+    margin-right: 60px;
+    margin-left: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.aboutMe .boxAbuot .img {
+    width: 48%;
+    height: 300px;
+    background-color: #fff;
+    padding: 3px;
+}
+
+.aboutMe .boxAbuot .img img {
+    width: 100%;
+    height: 100%;
+}
+
+.aboutMe .boxAbuot .aboutLorem {
+    width: 48%;
+}
+
+.aboutMe .boxAbuot .aboutLorem span {
+    display: inline-block;
+    font-size: 14px;
+    padding: 5px;
+    text-align: left;
+}
+
+.aboutMe .boxAbuot .aboutLorem span:first-child {
+    color: var(--colorTow);
+    line-height: 1.7;
+    word-break: break-all;
+}
+
+.aboutMe .boxAbuot .aboutLorem span:nth-child(2) {
+    margin-top: 50px;
+    color: var(--colorTow);
+    line-height: 1.7;
+    word-break: break-all;
+}
+
+.aboutMe .boxAbuot .aboutLorem a {
+    text-decoration: none;
+    color: var(--colorOne);
+    background-color: var(--colorTow);
+    margin-top: 50px;
+    display: block;
+    padding: 15px;
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+
+/* End - AboutMe*/
+
+
+/* Start - Portfolio*/
+
+.Portfolio {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 20px;
+    background-color: rgba(113, 119, 125, 1);
+}
+
+.Portfolio p {
+    text-align: center;
+    padding-top: 50px;
+    font-size: 35px;
+    color: var(--colorOne);
+}
+
+.Portfolio #hr {
+    height: 2px;
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.Portfolio #hr hr {
+    height: 2px;
+    width: 90px;
+    margin-top: 20px;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none;
+}
+
+.Portfolio .Box-Portfolio {
+    margin-left: 60px;
+    margin-right: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 15px 15px;
+}
+
+.divOne {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.divOne p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.678);
+    text-transform: uppercase;
+    font-size: 25px;
+    color: #fff;
+    padding: 0;
+    transform: rotateY(90deg);
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+.divOne:hover>p {
+    transform: rotateY(0);
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    -ms-transform: rotateY(0);
+    -o-transform: rotateY(0);
+}
+
+.divOne img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* End - Portfolio*/
+
+
+/* Start - Get*/
+
+.Get {
+    background-color: var(--colorOne);
+    width: 100%;
+    height: 100%;
+    padding-bottom: 30px;
+}
+
+.Get p {
+    text-align: center;
+    padding-top: 50px;
+    font-size: 35px;
+    color: var(--colorTow);
+}
+
+.Get #hr {
+    height: 2px;
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.Get #hr hr {
+    height: 2px;
+    width: 90px;
+    margin-top: 20px;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none;
+}
+
+.Get .boxGet {
+    margin-left: 60px;
+    margin-right: 60px;
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    grid-template-rows: repeat(1, 34px);
+    justify-content: center;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.Get .boxGet input {
+    outline: none;
+    border: none;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.Get .boxGet textarea {
+    display: grid;
+    grid-column: span 2;
+    height: 94px;
+    outline: none;
+    border: none;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.Get .boxGet .input {
+    width: 100%;
+    display: grid;
+    grid-column: span 2;
+    justify-content: center;
+}
+
+.Get .boxGet .input input[type='submit'] {
+    text-decoration: none;
+    color: var(--colorOne);
+    background-color: var(--colorTow);
+    margin-top: 50px;
+    display: block;
+    padding: 15px;
+    width: 150px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.Get .boxGet .social {
+    display: grid;
+    grid-column: span 2;
+    justify-content: center;
+}
+
+.Get .boxGet .iconSocial {
+    margin-top: 50px;
+    display: flex;
+}
+
+.Get .boxGet .iconSocial a {
+    text-decoration: none;
+    color: var(--colorTow);
+    font-size: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+}
+
+.Get .boxGet .iconSocial a:hover {
+    color: #fff;
+}
+
+
+/* End - Get*/
+
+
+/* Start - footer*/
+
+.footer {
+    width: 100%;
+    height: 60px;
+    background-color: var(--colorTow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 13px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px;
+    font-size: 13px;
+}
+
+
+/* End - footer*/
